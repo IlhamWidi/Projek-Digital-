@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Morveline - Desain Rumah Modern & 3D</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            darkblue: {
+              900: '#0a1929',
+              800: '#112240',
+              700: '#1e3a5f'
+            }
+          },
+          animation: {
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'float': 'float 6s ease-in-out infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .glass {
+      background: rgba(17, 34, 64, 0.6);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .glass-dark {
+      background: rgba(10, 25, 41, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(59, 130, 246, 0.1);
+    }
+    
+    .glass-card {
+      background: rgba(20, 40, 80, 0.2);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(59, 130, 246, 0.15);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    }
+    
+    .bg-glow {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      border-radius: 100%;
+      filter: blur(80px);
+      z-index: 0;
+      opacity: 0.4;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans">
+  <!-- Background Elements -->
+  <div class="fixed bg-glow top-20 left-40 bg-blue-600"></div>
+  <div class="fixed bg-glow bottom-40 right-20 bg-indigo-700"></div>
+  <div class="fixed bg-glow top-[60%] left-[70%] bg-purple-800"></div>
+  
+  <!-- Navbar -->
+  <nav class="glass-dark flex justify-between items-center px-6 py-4 sticky top-0 z-50 shadow-lg">
+    <div class="flex items-center gap-3">
+      <span class="text-xl font-bold tracking-wide text-blue-400">MORVELINE</span>
+    </div>
+    <ul class="hidden md:flex gap-8 text-sm font-medium">
+      <li><a href="#beranda" class="hover:text-blue-400 transition">Beranda</a></li>
+      <li><a href="#tentang" class="hover:text-blue-400 transition">Tentang Kami</a></li>
+      <li><a href="#kontak" class="hover:text-blue-400 transition">Kontak</a></li>
+    </ul>
+    <a href="#kontak" class="glass px-4 py-2 text-blue-300 rounded-lg hover:bg-darkblue-800 transition hidden md:block">Hubungi Kami</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="beranda" class="px-6 md:px-16 py-24 bg-gradient-to-br from-darkblue-900 to-gray-900 relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(59,130,246,0.2),transparent_70%)]"></div>
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center relative z-10">
+      <div>
+        <span class="px-3 py-1 text-xs font-semibold glass rounded-full mb-4 inline-block text-blue-300">DESAIN PREMIUM</span>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6">Desain <span class="text-blue-400 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-400">Rumah Modern</span> dengan Presisi 3D</h1>
+        <p class="text-lg text-gray-300 mb-8">Morveline mewujudkan rumah impian Anda dengan visualisasi 3D mutakhir dan desain arsitektur modern yang disesuaikan dengan kebutuhan Anda.</p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#diskon" class="px-6 py-3 glass-card text-blue-300 rounded-lg hover:bg-darkblue-800/60 transition text-center">Lihat Penawaran</a>
+          <a href="#kontak" class="px-6 py-3 bg-darkblue-700/80 border border-blue-900/30 text-white rounded-lg hover:bg-darkblue-800 transition text-center">Hubungi Kami</a>
+        </div>
+      </div>
+      <div class="relative animate-float">
+        <div class="absolute -inset-1.5 bg-blue-600/20 rounded-2xl blur-xl animate-pulse-slow"></div>
+        <img src="https://img.freepik.com/premium-photo/blue-house_694282-140.jpg" alt="Desain Rumah Modern" class="rounded-2xl shadow-2xl relative z-10 w-full" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Discount Countdown Section -->
+  <section id="diskon" class="py-16 relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(59,130,246,0.15),transparent_70%)]"></div>
+    <div class="glass-dark max-w-4xl mx-auto rounded-2xl p-8 md:p-12 relative z-10">
+      <div class="absolute bg-glow -top-20 left-20 bg-blue-700"></div>
+      
+      <div class="text-center mb-8">
+        <span class="px-3 py-1 text-xs font-semibold glass rounded-full mb-4 inline-block text-blue-300">PENAWARAN TERBATAS</span>
+        <h2 class="text-3xl md:text-4xl font-bold mb-3">Diskon Spesial 80%</h2>
+        <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-4">Untuk 5 pelanggan pertama bulan ini</p>
+        
+        <!-- Price Display -->
+        <div class="flex items-center justify-center gap-4 my-6">
+          <div class="text-gray-400 text-2xl md:text-3xl line-through decoration-red-500 decoration-2">Rp 599K</div>
+          <div class="relative">
+            <span class="absolute -top-5 -right-4 bg-red-500 text-white text-xs px-2 py-1 rounded-lg font-bold">83% OFF</span>
+            <span class="text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Rp 99K</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="flex justify-center mb-10">
+        <div class="grid grid-cols-4 gap-4">
+          <div class="flex flex-col items-center">
+            <div class="glass w-16 h-16 md:w-24 md:h-24 rounded-xl flex items-center justify-center mb-2 border border-blue-500/30">
+              <span id="days" class="text-2xl md:text-4xl font-bold text-blue-400">03</span>
+            </div>
+            <span class="text-sm text-gray-300">Hari</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="glass w-16 h-16 md:w-24 md:h-24 rounded-xl flex items-center justify-center mb-2 border border-blue-500/30">
+              <span id="hours" class="text-2xl md:text-4xl font-bold text-blue-400">12</span>
+            </div>
+            <span class="text-sm text-gray-300">Jam</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="glass w-16 h-16 md:w-24 md:h-24 rounded-xl flex items-center justify-center mb-2 border border-blue-500/30">
+              <span id="minutes" class="text-2xl md:text-4xl font-bold text-blue-400">45</span>
+            </div>
+            <span class="text-sm text-gray-300">Menit</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="glass w-16 h-16 md:w-24 md:h-24 rounded-xl flex items-center justify-center mb-2 border border-blue-500/30">
+              <span id="seconds" class="text-2xl md:text-4xl font-bold text-blue-400">22</span>
+            </div>
+            <span class="text-sm text-gray-300">Detik</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center">
+        <a href="https://wa.me/6285123456789?text=Halo,%20saya%20ingin%20menggunakan%20diskon%20special%20untuk%20jasa%20desain%20rumah%20(Rp%2099K)" class="inline-flex items-center gap-2 bg-green-600 text-white px-8 py-4 rounded-xl hover:bg-green-700 transition text-lg font-medium">
+          <i class="fab fa-whatsapp text-2xl"></i>
+          <span>Beli Sekarang via WhatsApp</span>
+        </a>
+        <p class="text-sm text-gray-400 mt-4">*Syarat dan ketentuan berlaku</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="tentang" class="px-6 md:px-16 py-20 relative">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(30,58,95,0.15),transparent_70%)]"></div>
+    <div class="max-w-5xl mx-auto relative z-10">
+      <div class="text-center mb-12">
+        <span class="px-3 py-1 text-xs font-semibold glass rounded-full mb-4 inline-block text-blue-300">TENTANG KAMI</span>
+        <h2 class="text-3xl font-bold mb-4">Mengapa Memilih Morveline?</h2>
+        <p class="text-gray-300 max-w-2xl mx-auto">Kami adalah tim desainer dan arsitek profesional yang berdedikasi untuk mewujudkan rumah impian Anda menjadi kenyataan.</p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="glass-card p-6 rounded-xl">
+          <div class="w-12 h-12 bg-blue-900/30 rounded-xl flex items-center justify-center mb-4">
+            <i class="fas fa-cube text-blue-400 text-xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3 text-blue-200">Visualisasi 3D</h3>
+          <p class="text-gray-300">Render realistis yang menampilkan setiap detail rumah masa depan Anda dengan kualitas fotorealistis.</p>
+        </div>
+        
+        <div class="glass-card p-6 rounded-xl">
+          <div class="w-12 h-12 bg-blue-900/30 rounded-xl flex items-center justify-center mb-4">
+            <i class="fas fa-building text-blue-400 text-xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3 text-blue-200">Arsitektur Modern</h3>
+          <p class="text-gray-300">Desain kontemporer yang memadukan estetika dengan fungsionalitas untuk pengalaman hidup yang benar-benar unik.</p>
+        </div>
+        
+        <div class="glass-card p-6 rounded-xl">
+          <div class="w-12 h-12 bg-blue-900/30 rounded-xl flex items-center justify-center mb-4">
+            <i class="fas fa-couch text-blue-400 text-xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3 text-blue-200">Desain Interior</h3>
+          <p class="text-gray-300">Interior yang bergaya disesuaikan untuk mencerminkan selera pribadi Anda dan mengoptimalkan ruang hidup Anda.</p>
+        </div>
+      </div>
+      
+     
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="glass-dark text-gray-400 py-10 mt-12 border-t border-blue-900/20">
+    <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <span class="text-xl font-bold tracking-wide text-blue-400">MORVELINE</span>
+        </div>
+        <p class="text-gray-400 mb-4">Menghadirkan desain arsitektur modern dengan presisi 3D dan konsep inovatif.</p>
+        <div class="flex gap-4">
+          <a href="#" class="w-8 h-8 bg-darkblue-800 rounded-full flex items-center justify-center hover:bg-blue-900/50 transition">
+            <i class="fab fa-facebook-f text-gray-300"></i>
+          </a>
+          <a href="#" class="w-8 h-8 bg-darkblue-800 rounded-full flex items-center justify-center hover:bg-blue-900/50 transition">
+            <i class="fab fa-instagram text-gray-300"></i>
+          </a>
+          <a href="#" class="w-8 h-8 bg-darkblue-800 rounded-full flex items-center justify-center hover:bg-blue-900/50 transition">
+            <i class="fab fa-pinterest text-gray-300"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div>
+        <h3 class="text-lg font-semibold mb-4 text-white">Tautan Cepat</h3>
+        <ul class="space-y-2">
+          <li><a href="#beranda" class="hover:text-blue-400 transition">Beranda</a></li>
+          <li><a href="#diskon" class="hover:text-blue-400 transition">Penawaran Diskon</a></li>
+          <li><a href="#tentang" class="hover:text-blue-400 transition">Tentang Kami</a></li>
+          <li><a href="#kontak" class="hover:text-blue-400 transition">Hubungi Kami</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="text-lg font-semibold mb-4 text-white">Newsletter</h3>
+        <p class="text-gray-400 mb-4">Berlangganan newsletter kami untuk mendapatkan informasi terbaru.</p>
+        <form class="flex">
+          <input type="email" placeholder="Email Anda" class="p-2 bg-darkblue-800/80 border border-gray-700 rounded-l-lg focus:outline-none focus:ring-1 focus:ring-blue-600 flex-grow" />
+          <button class="p-2 bg-blue-700 text-white rounded-r-lg hover:bg-blue-800 transition">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+    
+    <div class="max-w-5xl mx-auto px-6 pt-8 mt-8 border-t border-gray-800 text-center">
+      <p>&copy; 2025 Morveline. Hak Cipta Dilindungi.</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/6285123456789" class="fixed bottom-6 right-6 bg-green-600 w-14 h-14 rounded-full flex items-center justify-center text-white shadow-lg hover:bg-green-700 transition z-50">
+    <i class="fab fa-whatsapp text-2xl"></i>
+  </a>
+
+  <!-- Countdown Timer Script -->
+  <script>
+    // Set the date 3 days from now
+    const countDownDate = new Date();
+    countDownDate.setDate(countDownDate.getDate() + 3);
+    
+    // Update the countdown every 1 second
+    const countdownTimer = setInterval(function() {
+      // Get today's date and time
+      const now = new Date().getTime();
+      
+      // Find the distance between now and the countdown date
+      const distance = countDownDate - now;
+      
+      // Time calculations for days, hours, minutes and seconds
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      
+      // Display the result
+      document.getElementById("days").innerHTML = days < 10 ? "0" + days : days;
+      document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
+      document.getElementById("minutes").innerHTML = minutes < 10 ? "0" + minutes : minutes;
+      document.getElementById("seconds").innerHTML = seconds < 10 ? "0" + seconds : seconds;
+      
+      // If the countdown is finished, display message
+      if (distance < 0) {
+        clearInterval(countdownTimer);
+        document.getElementById("days").innerHTML = "00";
+        document.getElementById("hours").innerHTML = "00";
+        document.getElementById("minutes").innerHTML = "00";
+        document.getElementById("seconds").innerHTML = "00";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
